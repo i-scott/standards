@@ -10,5 +10,10 @@ jobs:
 
     steps:
     - name: Test
-      run: Write-Host "thisisatest.ToUpper()"
+      run: |
+        echo "::set-output name=testoutput::Write-Host 'thisisatest.ToUpper()'"
       shell: powershell
+      id: test 
+      
+    - name: Test 2
+      run: Write-Host steps.test.output.testoutput
