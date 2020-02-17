@@ -11,3 +11,4 @@ jobs:
     steps:
     - name: Test
       run: "thisisatest.toupper()"
+      shell: powershell
